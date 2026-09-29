@@ -250,7 +250,8 @@ function Karma (updater, socket, iframe, opener, navigator, location, document) 
           break
         }
       }
-      if (!isReturnUrlAllowed) {
+      // A configured pattern cannot authorize executable or local-file URLs.
+      if (!/^https?:\/\//i.test(returnUrl) || !isReturnUrlAllowed) {
         throw new Error(
           'Security: Navigation to '.concat(
             returnUrl,

@@ -41,6 +41,14 @@ describe('completion', () => {
       expect(completion).to.deep.equal(['init'])
     })
 
+    it('treats regex punctuation in a partial as literal text', () => {
+      c.sendCompletion(['start', 's.art', '[option'], mockEnv('s.'))
+      expect(completion).to.deep.equal(['s.art'])
+      completion.length = 0
+      c.sendCompletion(['start', '[option'], mockEnv('['))
+      expect(completion).to.deep.equal(['[option'])
+    })
+
     it('should filter out already used words/args', () => {
       c.sendCompletion(['--single-run', '--port', '--xxx'], mockEnv('start --single-run '))
       expect(completion).to.deep.equal(['--port', '--xxx'])

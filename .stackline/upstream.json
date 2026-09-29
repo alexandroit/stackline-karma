@@ -103,7 +103,8 @@
     "static/karma.js",
     "static/context.js",
     "scripts/client.js",
-    "local.log"
+    "local.log",
+    "lib/completion.js"
   ],
   "testCommand": "npm run test:unit && npm run test:e2e && npm run test:client",
   "strategy": "Published upstream files, including generated declarations, are preserved and checked against SHA-256. Functional tests run against source and the extracted final package. Changes to published runtime files require an explicit reviewed allowlist.",

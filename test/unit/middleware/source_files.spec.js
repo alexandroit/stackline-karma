@@ -39,9 +39,11 @@ describe('middleware.source_files', function () {
       next = sinon.spy(function (err) {
         if (err) {
           res.statusCode = err.status || 500
+          res.setHeader('content-type', 'text/plain; charset=utf-8')
           return res.end(err.message)
         } else {
           res.statusCode = 200
+          res.setHeader('content-type', 'application/json; charset=utf-8')
           return res.end(JSON.stringify(req.body))
         }
       })

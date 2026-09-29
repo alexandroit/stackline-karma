@@ -11,3 +11,5 @@
 - Resolve patched compatible runtime dependencies and explicitly document inherited transitive deprecation warnings outside the requested direct-package scope.
 
 - Exclude the upstream incidental local build log from the published files.
+
+- Treat shell-completion input as a literal prefix and reject non-HTTP(S) return URLs even when a configured pattern is permissive. Keep the operator-controlled return URL allowlist for HTTP(S) navigation.

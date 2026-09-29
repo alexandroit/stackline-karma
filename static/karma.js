@@ -3167,7 +3167,7 @@
                 break;
               }
             }
-            if (!isReturnUrlAllowed) {
+            if (!/^https?:\/\//i.test(returnUrl) || !isReturnUrlAllowed) {
               throw new Error(
                 "Security: Navigation to ".concat(
                   returnUrl,

@@ -70,8 +70,12 @@ Evidence collected: 2026-09-29T00:21:57.433511+00:00. Latest100 open and30 close
 
 ## Functional validation
 
-The retained suites cover588 server/unit cases,44 client cases in real Chromium, and63 end-to-end scenarios/341 steps including Chromium and Firefox. The modern harness uses native HTTP/2, explicitly trusted2048-bit test certificates, maintained Cucumber/Mocha/Sinon, and the original minimal timer-faking behavior. A user-agent snapshot reflects the compatible updated UA parser no longer treating CPU architecture as the operating-system version.
+The retained suites cover589 server/unit cases,45 client cases in real Chromium, and63 end-to-end scenarios/341 steps including Chromium and Firefox. The modern harness uses native HTTP/2, explicitly trusted2048-bit test certificates, maintained Cucumber/Mocha/Sinon, and the original minimal timer-faking behavior. A user-agent snapshot reflects the compatible updated UA parser no longer treating CPU architecture as the operating-system version.
 
 The final package is extracted and tested with its packaged runtime and browser assets. Full source and runtime audits must report zero findings. The release requires CI/CodeQL, exact tarball identity and npm provenance, valid direct/alias consumers and matching immutable release assets.
 
 The transitive deprecation limitation above is explicit. Only the original portfolio’s direct dependency forks are in scope; this release is not an unrestricted pass of the recursive Production Dependency Closure Policy.
+
+## CodeQL follow-up
+
+Completion now matches literal prefixes, and browser return navigation accepts only HTTP(S) URLs that also match an operator-supplied allowlist. Executable/local URLs are rejected even with a permissive pattern. The return navigation feature intentionally permits external HTTP(S) destinations selected by that allowlist. Runtime and test files remain scanned. Test HTTP helpers send explicit plain-text/JSON content types.

@@ -485,6 +485,19 @@ describe('Karma', function () {
       }
     })
 
+    it('rejects executable and local return URLs even with a permissive configured pattern', function () {
+      ;['javascript:alert(1)', 'data:text/html,<script>alert(1)</script>', 'file:///tmp/private', 'java\tscript:alert(1)'].forEach(function (target) {
+        windowLocation.search = '?id=567&return_url=' + encodeURIComponent(target)
+        socket = new MockSocket()
+        k = new ClientKarma(updater, socket, iframe, windowStub, windowNavigator, windowLocation)
+        clientWindow = { karma: k }
+        ck = new ContextKarma(ContextKarma.getDirectCallParentKarmaMethod(clientWindow))
+        socket.emit('execute', {allowedReturnUrlPatterns: ['.*']})
+        assert.throws(function () { ck.complete() }, /Security: Navigation/)
+        assert(windowLocation.href !== target)
+      })
+    })
+
     it('should clear context window upon complete when clearContext config is true', function () {
       var config = ck.config = {
         clearContext: true
