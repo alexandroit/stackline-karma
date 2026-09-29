@@ -1,23 +1,51 @@
 # @stackline/karma
 
-Independent maintenance fork of `karma@6.4.4`, preserving its API and published type declarations.
+> Spectacular Test Runner for JavaScript.
 
-```sh
+[![npm version](https://img.shields.io/npm/v/@stackline/karma.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/karma)
+[![license](https://img.shields.io/npm/l/@stackline/karma.svg?style=flat-square)](https://github.com/alexandroit/stackline-karma)
+[![GitHub repository](https://img.shields.io/badge/GitHub-alexandroit%2Fstackline-karma-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-karma)
+[![Docs](https://img.shields.io/badge/docs-alexandro.net-0f766e?style=flat-square)](https://alexandro.net/docs/vanilla/karma/)
+[![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
+
+**[Documentation](https://alexandro.net/docs/vanilla/karma/)** | **[npm](https://www.npmjs.com/package/@stackline/karma)** | **[Issues](https://github.com/alexandroit/stackline-karma/issues)** | **[Repository](https://github.com/alexandroit/stackline-karma)**
+
+**Current package version:** `1.0.1`
+
+---
+
+## Why this package?
+
+`@stackline/karma` is the Stackline-maintained distribution of `karma@6.4.4`. It is an independent continuation of [karma](https://github.com/karma-runner/karma); original authors and licenses remain credited below.
+
+## Compatibility
+
+| Item | Value |
+| :--- | :--- |
+| Package | `@stackline/karma@1.0.1` |
+| API target | `karma@6.4.4` |
+| Supported Node.js | `>= 10` |
+| License | `MIT` |
+| Main entry | `./lib/index` |
+| CLI | `karma` |
+| Runtime dependencies | `di, tmp, glob, mime, qjobs, yargs, braces, lodash, log4js, mkdirp, rimraf, connect, chokidar, minimatch, socket.io, http-proxy, source-map, body-parser, graceful-fs, isbinaryfile, range-parser, ua-parser-js, dom-serialize, @colors/colors` |
+
+## Installation
+
+```bash
 npm install @stackline/karma
-# Keep existing imports:
-npm install karma@npm:@stackline/karma@1.0.0
 ```
 
-[Stackline](https://alexandro.net/) · [Issues](https://github.com/alexandroit/stackline-karma/issues) · [Community](https://www.reddit.com/r/Stackline/)
+Preserve existing imports and plugin resolution with an npm alias:
 
-See [UPSTREAM.md](UPSTREAM.md) for source identity and issue review, and [CHANGELOG.md](CHANGELOG.md) for maintenance changes. Functional tests also run against the final npm tarball; releases are published from GitHub Actions with provenance.
+```bash
+npm install karma@npm:@stackline/karma
+```
 
-## Upstream documentation
+## Usage and API reference
 
-# Karma
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/karma-runner/karma) [![npm version](https://img.shields.io/npm/v/karma.svg?style=flat-square)](https://www.npmjs.com/package/karma) [![npm downloads](https://img.shields.io/npm/dm/karma.svg?style=flat-square)](https://npmcharts.com/compare/karma?minimal=true)
+### Karma
 
- [![Code Climate](https://img.shields.io/codeclimate/maintainability/karma-runner/karma)](https://codeclimate.com/github/karma-runner/karma) [![PRs Welcome](https://img.shields.io/badge/prs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com/) [![Dependency Status](https://img.shields.io/david/karma-runner/karma.svg?style=flat-square)](https://david-dm.org/karma-runner/karma) [![devDependency Status](https://img.shields.io/david/dev/karma-runner/karma.svg?style=flat-square)](https://david-dm.org/karma-runner/karma#info=devDependencies) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 A simple tool that allows you to execute JavaScript code in multiple
 _real_ browsers.
@@ -47,7 +75,6 @@ It has been incredible to see Karma's impact on the web testing ecosystem and we
 
 * Obligatory [documentation]
 * Quick questions:
-[![Gitter Chat](https://img.shields.io/badge/GITTER-join%20chat-green.svg?style=flat-square)](https://gitter.im/karma-runner/karma)
 * Longer questions: [Mailing List]
 * Bug reports [Issue Tracker]
 * Everything less than 140 characters: [@JsKarma] on Twitter
@@ -152,3 +179,425 @@ use the awesome [Socket.io] library and [Node.js].
 
 [browsers]: https://karma-runner.github.io/latest/config/browsers.html
 [documentation]: https://karma-runner.github.io
+
+
+## Maintenance and compatibility notes
+
+External HTTP(S) return navigation remains configurable for compatibility and can act as an open redirect. Script schemes are rejected. Review return URL policy before exposing the runner beyond a trusted development environment.
+
+## Credits and original authors
+
+- Original project: [karma](https://github.com/karma-runner/karma).
+- Vojta Jína.
+- Friedel Ziegelmayer.
+- dignifiedquire.
+- johnjbarton.
+- Yaroslav Admin.
+- greenkeeperio-bot.
+- semantic-release-bot.
+- Karma Bot.
+- Maksim Ryzhikov.
+- ukasz Usarz.
+- Christian Budde Christensen.
+- Wesley Cho.
+- taichi.
+- Jonathan Ginsburg.
+- Liam Newman.
+- lukasz.
+- Anton.
+- Michał Gołębiowski-Owczarek.
+- Todd Wolfson.
+- Mark Trostler.
+- Ciro Nunes.
+- Pawel Kozlowski.
+- Robo.
+- Shyam Seshadri.
+- Tim Cuthbertson.
+- Daniel Compton.
+- Mark Ethan Trostler.
+- Mourad.
+- Brian Di Palma.
+- Georgii Dolzhykov.
+- Kim Joar Bekkelund.
+- Matthias Oßwald.
+- Nick Malaguti.
+- falsandtru.
+- joshjb84.
+- vivganes.
+- Andrew Martin.
+- Aymeric Beaumet.
+- Brian Ford.
+- Chris Casola.
+- Chris Hunt.
+- Daniel Aleksandersen.
+- David Souther.
+- Ilya Volodin.
+- Iristyle.
+- Jake Champion.
+- Jeff Jewiss.
+- Jérémy Judéaux.
+- Marcello Nuccio.
+- Nico Jansen.
+- Pieter Mees.
+- Sergei Startsev.
+- Tobias Speicher.
+- dependabot[bot].
+- pavelgj.
+- sylvain-hamel.
+- ywong.
+- Andrew Morris.
+- Aseem Bansal.
+- Bryan Smith.
+- Bulat Shakirzyanov.
+- ChangZhuo Chen.
+- Chris Bottin.
+- Cyrus Chan.
+- DarthCharles.
+- David Herges.
+- David Pärsson.
+- Ethan J. Brown.
+- Ezra Brooks.
+- Filipe Guerra.
+- Greenkeeper.
+- Hugues Malphettes.
+- Igor Minar.
+- Ilya Goncharov.
+- James Ford.
+- James Talmage.
+- Janderson Constantino.
+- Jonas Pommerening.
+- Jonathan Freeman.
+- Josh.
+- KJ Tsanaktsidis.
+- Keen Yee Liau.
+- Kelly Jensen.
+- Kevin Huang.
+- Kevin WENNER.
+- Levi Thomason.
+- Luke Page.
+- Matt Lewis.
+- Parashuram.
+- Pat Tullmann.
+- PatrickJS.
+- Paul Gschwendtner.
+- Richard Harrington.
+- Roarke Gaskill.
+- Robert Stein.
+- Robin Liang.
+- Ruben Bridgewater.
+- Réda Housni Alaoui.
+- Sammy Jelin.
+- Sergey Simonchik.
+- Shane Russell.
+- Stefan Dragnev.
+- Steve Mao.
+- Steve Van Opstal.
+- Sylvain Hamel.
+- SymbioticKilla.
+- Terry.
+- Thomas Parisot.
+- Tim Gates.
+- Tom Erik Støwer.
+- Vivek Ganesan.
+- Vladimir Starkov.
+- comdiv.
+- karmarunnerbot.
+- ngiebel.
+- rdodev.
+- u812.
+- Aaron Powell.
+- Adrien Crivelli.
+- Alan Agius.
+- Alejandro Mantecon Guillen.
+- Ales Rosina.
+- Alexander Pepper.
+- Alexander Shtuchkin.
+- Alexei.
+- Ameer Jhan.
+- Anders Ekdahl.
+- Anders Janmyr.
+- Andreas Krummsdorf.
+- Andreas Pålsson.
+- Andrew Fischer.
+- Andrew Marcinkevičius.
+- Andrey Chalkin.
+- Andy Joslin.
+- Anton Usmansky.
+- Athur Ming.
+- Atul Bhosale.
+- AugustinLF.
+- AvnerCohen.
+- Awad Mackie.
+- Basemm.
+- Benoit Charbonnier.
+- Bhavesh Kakadiya.
+- Borewit.
+- Brady Wied.
+- Bram Borggreve.
+- Breno Calazans.
+- Brian Donovan.
+- Brian M Hunt.
+- Cagdas Bayram.
+- Carl Goldberg.
+- Chad Smith.
+- Chang Wang.
+- Charles Suh.
+- Chelsea Urquhart.
+- Chris.
+- Chris Chua.
+- Chris Dawson.
+- Christian Weiss.
+- Christopher Hiller.
+- Chuf.
+- Ciro S. Costa.
+- Daan Stolp.
+- Damien Choizit.
+- Dan Siwiec.
+- Dan Thareja.
+- Danny Croft.
+- Danny Tuppeny.
+- David Hyde.
+- David Jensen.
+- David M. Karr.
+- Derek Gould.
+- Derek Schaller.
+- Dieter Oberkofler.
+- Dillon.
+- Dmitrii Abramov.
+- Dmitriy Ryajov.
+- Donovan Hutchinson.
+- Douglas Blumeyer.
+- Dunja Radulov.
+- ERt.
+- Ed Rooth.
+- Eddie Monge.
+- Eden.
+- Edward Hutchins.
+- Eldar Jafarov.
+- Eric Baer.
+- Esteban Marin.
+- Evgeniy Chekan.
+- Fabian Beuke.
+- Filipe Silva.
+- Franck Garcia.
+- Fred Sauer.
+- Frederic Hemberger.
+- Fredrik Bonander.
+- Gavin Aiken.
+- Geert Van Laethem.
+- Glenn Anderson.
+- Greg Thornton.
+- Gregory Cowan.
+- Hendrik Purmann.
+- Homa Wong.
+- Igor Lima.
+- Islam Sharabash.
+- Jack Tarantino.
+- Jacob Trimble.
+- Jakub Z.
+- James Shore.
+- Jan Molak.
+- Jeff Froom.
+- Jeff Lage.
+- Jeff Yates.
+- Jeremy Axelrod.
+- Jerry Reptak.
+- Jesse M. Holmes.
+- Joe Lencioni.
+- Johannes Gorset.
+- John Wehr.
+- Jon Bretman.
+- Jonathan ES Lin.
+- Jonathan Felchlin.
+- Jonathan Kingston.
+- Jonathan Niles.
+- Josh Lory.
+- João Marcos Duarte.
+- Julian Connor.
+- Julie Ralph.
+- Jurko Gospodnetić.
+- Justin Ridgewell.
+- KahWee Teng.
+- Karl Lindmark.
+- Karol Fabjańczuk.
+- Karolis Narkevicius.
+- Keats.
+- Keith Cirkel.
+- Kent C. Dodds.
+- Kevin Ortman.
+- Kostiantyn Kahanskyi.
+- Kris Kowal.
+- Lachlan Heywood.
+- Lenny Urbanowski.
+- Long Ho.
+- LoveIsGrief.
+- Lucas Theisen.
+- Lukasz Zatorski.
+- M1xA.
+- Magnus Markling.
+- Manfred Stock.
+- Manoel.
+- Marko Anastasov.
+- Martin Geisler.
+- Martin Jul.
+- Martin Lemanski.
+- Martin Probst.
+- Marvin Heilemann.
+- Matias Niemelä.
+- Matthew Amato.
+- Matthew Cale.
+- Matthew Machuga.
+- Matti Paksula.
+- Mattijs Kneppers.
+- Max Rose.
+- Max Waterman.
+- Merott Movahedi.
+- Merrick Christensen.
+- Michael Krotscheck.
+- Michael Vartan.
+- Michał Siwek.
+- Milan Aleksic.
+- Milana Stojadinov.
+- Mohamed Eltuhamy.
+- Nathan Cornelius.
+- Nathan Hunzaker.
+- NeverwinterMoon.
+- Nick Carter.
+- Nick McCurdy.
+- Nick Payne.
+- Nick Petruzzelli.
+- Nick Williams.
+- Nicolas Artman.
+- Nicolas Ferrero.
+- Nikita Balakirev.
+- Nir Moav.
+- Nish.
+- Nuno Job.
+- Oleg Gomozov.
+- Olivier Yiptong.
+- OniOni.
+- OpenShift guest.
+- Outsider.
+- Pascal Hartig.
+- Patrick Lussan.
+- Patrick Neschkudla.
+- Patrik Henningsson.
+- Paweł Kapalla.
+- Payam Valadkhan.
+- Pedro Araujo.
+- Pete Bacon Darwin.
+- Pete Swan.
+- Peter Burns.
+- Peter Halliday.
+- Peter McAlpine.
+- Peter Newman.
+- Peter Yates.
+- Philip Harrison.
+- Pierre Vanduynslager.
+- Piotr Błażejewicz.
+- Piper Chester.
+- Rafal Lindemann.
+- Remy Sharp.
+- Ricardo Melo Joia.
+- Rich Kuzsma.
+- Rich Trott.
+- Richard Herrera.
+- Rob Cherry.
+- Rob Dodson.
+- Rogério Vicente.
+- Rémi.
+- Sahat Yalkabov.
+- Sam Rawlins.
+- Samuel Marks.
+- Saugat Acharya.
+- Schmulik Raskin.
+- Sergey Kruk.
+- Seth Rhodes.
+- Shahar Mor.
+- Shane Osbourne.
+- Sho Ikeda.
+- Sibiraj.
+- Simen Bekkhus.
+- Simon Warta.
+- Simone Gentili.
+- Slava Kotiya.
+- Sophie Cooper.
+- Stefan Becking.
+- Stephen Hazleton.
+- Stuart Memo.
+- Taylor Buley.
+- Taylor Hakes.
+- Terin Stock.
+- Thai Pangsakulyanont @ Taskworld.
+- Thijs Triemstra.
+- Tim Hartman.
+- Tim Olshansky.
+- Timo Tijhof.
+- Tom MacWright.
+- TrevDev.
+- Tyler Akins.
+- Vasily Ostanin.
+- Veronica Lynn.
+- Vincent Taverna.
+- Vitor Buzinaro.
+- Volune.
+- Vova Bilonenko.
+- Wizek.
+- XhmikosR.
+- Yang09701194.
+- Yaniv Efraim.
+- Yi Wang.
+- Yvonne Yip.
+- Zhang zhengzheng.
+- adamnation.
+- ahaurw01.
+- ashaffer.
+- cexbrayat.
+- coderaiser.
+- compact.
+- coridrew.
+- cy6erskunk.
+- david-garcia-nete.
+- deepak1556.
+- dorey.
+- grifball.
+- hdmr14.
+- hrgdavor.
+- ianjobling.
+- inf3rno.
+- is-already-taken.
+- jjoos.
+- jvalkeejarvi.
+- katrina95.
+- kyo_ago.
+- lanshunfang.
+- lusarz.
+- maik.
+- mdemo.
+- nathanfaucett.
+- pardoman.
+- sharmanikhil04.
+- thetrevdev.
+- thorn0.
+- toran billups.
+- xel23.
+- chalkerx@gmail.com>.
+- weiran.zsd@outlook.com>.
+- Copyright (C) 2011-2021 Google, Inc.
+- Stackline maintenance: [Alexandro Paixao Marques](https://www.linkedin.com/in/aleinfo/) and [Stackline contributors](https://github.com/alexandroit).
+
+Original copyright, license notices and contributor acknowledgements remain part of this distribution. Stackline maintenance does not replace authorship of the original work.
+
+## License
+
+`MIT`. See the license and notice files in the [repository](https://github.com/alexandroit/stackline-karma).
+
+## Community and Links
+
+- [Stackline website](https://alexandro.net/)
+- [GitHub projects](https://github.com/alexandroit)
+- [npm packages](https://www.npmjs.com/~alex360qc)
+- [Reddit community — r/Stackline](https://www.reddit.com/r/Stackline/)
+- [Maintainer LinkedIn](https://www.linkedin.com/in/aleinfo/)
+
+Use this repository's issue tracker for reproducible bugs and feature requests. Join r/Stackline for examples, usage questions and release discussions.
