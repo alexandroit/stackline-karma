@@ -1,0 +1,32 @@
+{
+  "repository": "alexandroit/stackline-karma",
+  "packages": [
+    {
+      "name": "@stackline/karma",
+      "path": "README.md",
+      "version": "1.0.1",
+      "baselineVersion": "1.0.0",
+      "keywords": [
+        "stackline",
+        "npm-package",
+        "karma",
+        "javascript",
+        "karma-plugin",
+        "nodejs",
+        "spectacular",
+        "runner",
+        "js",
+        "testing",
+        "test",
+        "remote",
+        "execution",
+        "maintenance-fork"
+      ],
+      "homepage": "https://alexandro.net/docs/vanilla/karma/",
+      "baselineTarball": "https://registry.npmjs.org/@stackline/karma/-/karma-1.0.0.tgz",
+      "baselineIntegrity": "sha512-DxATZK/cZGyZUibRxjo5clJQ7wBBt3i0Pv8mxT7FliRSEj8p8ccUzSJkp8l1AnQRPbLdYKSe95Z8itoLkaZq2Q==",
+      "expectedSha512": "1b307c682b35b6a6de51986ad755e4995a4fe70fb10d21424b4c4978c1a4ef9fde08ac9b574209a0515d11d96bd90f6dfdddb589edc01ca22a455235cc119c9a",
+      "tag": "docs-stackline-karma-v1.0.1"
+    }
+  ]
+}
