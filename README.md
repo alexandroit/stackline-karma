@@ -4,13 +4,13 @@
 
 [![npm version](https://img.shields.io/npm/v/@stackline/karma.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/karma)
 [![license](https://img.shields.io/npm/l/@stackline/karma.svg?style=flat-square)](https://github.com/alexandroit/stackline-karma)
-[![GitHub repository](https://img.shields.io/badge/GitHub-alexandroit%2Fstackline-karma-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-karma)
+[![GitHub repository](https://img.shields.io/badge/GitHub-repository-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-karma)
 [![Docs](https://img.shields.io/badge/docs-alexandro.net-0f766e?style=flat-square)](https://alexandro.net/docs/vanilla/karma/)
 [![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
 
 **[Documentation](https://alexandro.net/docs/vanilla/karma/)** | **[npm](https://www.npmjs.com/package/@stackline/karma)** | **[Issues](https://github.com/alexandroit/stackline-karma/issues)** | **[Repository](https://github.com/alexandroit/stackline-karma)**
 
-**Current package version:** `1.0.1`
+**Current package version:** `1.0.2`
 
 ---
 
@@ -22,7 +22,7 @@
 
 | Item | Value |
 | :--- | :--- |
-| Package | `@stackline/karma@1.0.1` |
+| Package | `@stackline/karma@1.0.2` |
 | API target | `karma@6.4.4` |
 | Supported Node.js | `>= 10` |
 | License | `MIT` |
