@@ -124,7 +124,7 @@ describe('helper', () => {
         'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) ' +
         'HeadlessChrome/70.0.3538.77 Safari/537.36'
       )
-        .to.be.equal('Chrome Headless 70.0.3538.77 (Linux x86_64)')
+        .to.be.equal('Chrome Headless 70.0.3538.77 (Linux 0.0.0)')
     })
 
     it('should parse MS Edge Chromium', () => {

@@ -79,7 +79,7 @@ class World {
       }, this.config.customLaunchers)
     }))
 
-    const content = `process.env.CHROME_BIN = require('puppeteer').executablePath();
+    const content = `process.env.CHROME_BIN = process.env.CHROME_BIN || (process.platform === 'darwin' ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : '/usr/bin/google-chrome');
 
 module.exports = (config) => {
   config.set(${config});

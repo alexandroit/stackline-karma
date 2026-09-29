@@ -14,3 +14,14 @@ test-results.xml
 test/unit/test.log
 test/unit/fixtures/bundled.js
 .DS_Store
+
+node_modules/
+artifact/
+.package-consumer/
+*.tgz
+
+.stackline/client-tests.js
+.stackline/test-globals.mjs
+.stackline/sinon.cjs
+
+/local.log
