@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.4 - 2026-11-04
+
+- Correct the current package version and installation examples in the published README.
+- Reject stale README version claims in the packed artifact before npm publication.
+
 ## 1.0.3
 
 - Refresh locked dependencies and constrain affected modern glob/minimatch versions.

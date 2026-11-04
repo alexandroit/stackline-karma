@@ -10,7 +10,7 @@
 
 **[Documentation](https://alexandro.net/docs/vanilla/karma/)** | **[npm](https://www.npmjs.com/package/@stackline/karma)** | **[Issues](https://github.com/alexandroit/stackline-karma/issues)** | **[Repository](https://github.com/alexandroit/stackline-karma)**
 
-**Current package version:** `1.0.2`
+**Current package version:** `1.0.4`
 
 ---
 
@@ -22,7 +22,7 @@
 
 | Item | Value |
 | :--- | :--- |
-| Package | `@stackline/karma@1.0.2` |
+| Package | `@stackline/karma@1.0.4` |
 | API target | `karma@6.4.4` |
 | Supported Node.js | `>= 10` |
 | License | `MIT` |
