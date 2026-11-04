@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3
+
+- Refresh locked dependencies and constrain affected modern glob/minimatch versions.
+- Use patched Node.js in CI and publication, and record raw audit findings separately from the reviewed registry-cache false positive.
+
 ## 1.0.0
 
 - Start Stackline maintenance of the documented upstream API.

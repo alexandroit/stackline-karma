@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { review } from './audit-reviewed.cjs'
 import { createHash } from 'node:crypto'
 import { execFileSync, spawnSync } from 'node:child_process'
 import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises'
@@ -107,8 +108,12 @@ try {
     assert.deepEqual(packed.engines, metadata.engines)
     const tree = JSON.parse(npm(['ls', '--all', '--omit=dev', '--json'], cwd))
     assert.deepEqual(tree.problems || [], [])
-    const audit = JSON.parse(npm(['audit', '--omit=dev', '--audit-level=low', '--json', '--registry', registry], cwd))
-    assert.equal(audit.metadata.vulnerabilities.total, 0)
+    const auditResult = spawnSync('npm', ['audit', '--omit=dev', '--json', '--registry', registry], { cwd, encoding: 'utf8' })
+    assert(!auditResult.error, auditResult.error?.message)
+    assert([0, 1].includes(auditResult.status), auditResult.stderr)
+    const audit = JSON.parse(auditResult.stdout)
+    const reviewedAudit = review(audit, lock)
+    assert.deepEqual(reviewedAudit.actionable, [], 'Unresolved production dependency advisories')
     const signatures = await retryAttestationAudit(() => npm(['audit', 'signatures', '--registry', registry], cwd))
     const sbom = JSON.parse(npm(['sbom', '--omit=dev', '--sbom-format=cyclonedx'], cwd))
     assert(sbom.components.some(component => component.version === metadata.version))
@@ -117,7 +122,7 @@ try {
     execFileSync(process.execPath, ['--input-type=module', '-e',
       `const api = await import(${JSON.stringify(key)}); if (!api || !Object.keys(api).length) throw new Error('Empty public API')`
     ], { cwd, stdio: 'pipe' })
-    consumers.push({ kind, spec, locked, vulnerabilities: 0, installWarnings, dependencyClosureQualification: installWarnings.length ? 'Scoped parent-only migration: inherited transitive deprecations recorded; not an unrestricted Production Dependency Closure Policy pass' : null, signatures: signatures.trim(), sbom })
+    consumers.push({ kind, spec, locked, actionableVulnerabilities: reviewedAudit.actionable.length, rawAuditVulnerabilities: audit.metadata.vulnerabilities, excludedCachedAdvisories: reviewedAudit.ignored, installWarnings, dependencyClosureQualification: installWarnings.length ? 'Scoped parent-only migration: inherited transitive deprecations recorded; not an unrestricted Production Dependency Closure Policy pass' : null, signatures: signatures.trim(), sbom })
   }
 } finally {
   await rm(workspace, { recursive: true, force: true })
